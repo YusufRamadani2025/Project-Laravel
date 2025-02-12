@@ -3,7 +3,7 @@
 @section("content")
         <div class="row">
             <div class="col-6">
-            <h2>Input Kategori </h2>
+            <h2 class="text-judul">Input Kategori </h2>
                 <form method="post" action="{{route('admin.storekategori')}}">
                   @csrf
                     <div class="mb-3">
@@ -16,23 +16,24 @@
                         <input type="text" class="form-control" name="deskripsi" >
                     </div>
 
+                    <div class="button-input">
                     <div class="mb-3">
-                        <input type="submit" value="Input Data Buku" class="btn btn-primary" name="btnInputBukuGambar">
+                        <input type="submit" value="Input Data" class="btn btn-primary" name="btnInputBukuGambar">
+                      </div>
                     </div>
+                      <div class="text-success">
+                          @if (session('error'))
+                              {{session('error')}}
+                          @endif
 
+                          @if (session('success'))
+                              {{session('success')}}
+                          @endif
+                        </div>
                     </form>
-
-                    @if (session('error'))
-                        {{session('error')}}
-                    @endif
-
-
-                    @if (session('success'))
-                        {{session('success')}}
-                    @endif
-
             </div>
         </div>
+
 
                     <table class="table">
                       <tr>

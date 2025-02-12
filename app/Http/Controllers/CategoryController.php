@@ -47,7 +47,7 @@ class CategoryController extends Controller
 
         return redirect()
                 ->route('admin.inkategori')
-                ->with('success', 'WES MELEBU DATANE YO!');
+                ->with('success', 'WES MELEBU DATANE👍🏿!');
         }
         catch (\Exception $e)
         {

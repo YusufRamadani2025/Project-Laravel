@@ -10,22 +10,34 @@
 
   <style>
     *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            outline: none;
-            border: none;
-            text-decoration: none;
-            text-transform: capitalize;
-            transition: .2s linear;
-        }
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: .2s linear;
+    }
 
     .row{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .text-judul{
+        text-align: center;
+        font-weight: bold;
+    }
+    .button-input{
+      display: flex;
+      justify-content: center;
+    }
+    .text-success{
+      font-weight: bold;
+      text-align: center;
+    }
 
   </style>
 
