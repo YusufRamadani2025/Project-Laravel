@@ -18,7 +18,7 @@
 
                     <div class="button-input">
                     <div class="mb-3">
-                        <input type="submit" value="Input Data" class="btn btn-primary" name="btnInputBukuGambar">
+                        <input type="submit" value="Input Data Buku" class="btn btn-primary" name="btnInputBukuGambar">
                       </div>
                     </div>
                       <div class="text-success">

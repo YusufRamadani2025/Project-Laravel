@@ -26,4 +26,9 @@ class Buku extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function penulis()
+    {
+        return $this->belongsTo(Penulis::class);
+    }
+
 }
