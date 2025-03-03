@@ -2,23 +2,34 @@
 
 
 @section("content")
-        <div class="row">
-            <div class="col-6">
-            <h2>Input Penulis </h2>
-                <form method="post" action="{{route('admin.storepenulis')}}">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="namaBuku" class="form-label"> Nama Penulis </label>
-                        <input type="text" class="form-control" name="nama" >
-                    </div>
-                    <div class="mb-3">
-                        <label for="namaBuku" class="form-label">Dekripsi Penulis</label>
-                        <input type="text" class="form-control" name="deskripsi" >
-                    </div>
-                    <div class="mb-3">
-                        <input type="submit" value="Input Data Buku" class="btn btn-primary" name="btnInputBukuGambar">
-                    </div>
-                    <div class="text-success">
+        <div class="heading">INPUT PENULIS</div>
+        <div class="typing">
+            <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=25&duration=4000&pause=1000&color=000000&width=435&lines=JANGAN+LUPA+DI+ISI+YA+GUYS%3AD" alt="Typing SVG" /></a>
+        </div>
+        <form method="post" class="form" action="{{route('admin.storepenulis')}}">
+            @csrf
+            <div class="input-field">
+            <input
+                required=""
+                type="text"
+                name="nama"
+            />
+            <label for="namaBuku">Nama Penulis</label>
+            </div>
+            <div class="input-field">
+            <input
+                required=""
+                type="textarea"
+                name="deskripsi"
+            />
+            <label for="namaBuku">Deskripsi</label>
+            </div>
+
+            <div class="btn-container">
+            <button class="btn">Inputkan</button>
+            </div>
+
+            <div class="text-success">
                         @if (session('error'))
                             {{session('error')}}
                         @endif
@@ -26,10 +37,9 @@
                         @if (session('success'))
                             {{session('success')}}
                         @endif
-                    </div>
-            </form>
-        </div>
-    </div>
+            </div>
+
+        </form>
 
     <table class="table">
                     <tr>
@@ -46,8 +56,8 @@
                         <td>{{ $p->nama }}</td>
                         <td>{{ $p->deskripsi }}</td>
                         <td>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                        <button type="button" class="btn btn-primary">Edit</button>
+                            <button class="vista-button"><div>Delete</div></button>
+                            <button class="vista-button"><div>Edit</div></button>
                         </td>
                     </tr>
 
